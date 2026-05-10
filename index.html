@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>山东中医药大学李霞课题组博士后招聘</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --wx-bg: #ededed;
+      --paper: #fefefe;
+      --paper-edge: #f0f0f0;
+      --ink: #1a1a1a;
+      --ink-soft: #3d3d3d;
+      --muted: #888888;
+      --accent: #0d7a5c;
+      --accent-soft: #e8f5f0;
+      --accent-deep: #095c45;
+      --link: #576b95;
+      --link-hover: #3d5280;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --shadow-soft: 0 2px 12px rgba(0, 0, 0, 0.06);
+      --shadow-card: 0 8px 28px rgba(13, 122, 92, 0.08);
+      --max-read: 42rem;
+      --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --font-serif: "Noto Serif SC", "Songti SC", "SimSun", serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.85;
+      color: var(--ink-soft);
+      background: var(--wx-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(87, 107, 149, 0.35);
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+      border-bottom-color: var(--link-hover);
+    }
+
+    .page-shell {
+      min-height: 100vh;
+      padding: 0 0 3rem;
+    }
+
+    /* 公众号式顶栏封面 */
+    .article-hero {
+      background: linear-gradient(160deg, #0a5c46 0%, #0d7a5c 42%, #1a8f6f 100%);
+      color: #fff;
+      padding: 2.25rem 1.25rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .article-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 120%, rgba(255, 255, 255, 0.12), transparent 55%),
+        radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.08), transparent 40%);
+      pointer-events: none;
+    }
+
+    .article-hero .inner {
+      position: relative;
+      z-index: 1;
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+
+    .badge-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.92;
+    }
+
+    .badge-row span {
+      display: inline-block;
+      padding: 0.2rem 0.55rem;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .article-hero h1 {
+      margin: 0 0 1.5rem;
+      font-family: var(--font-serif);
+      font-size: clamp(1.45rem, 4.2vw, 1.95rem);
+      font-weight: 700;
+      line-height: 1.45;
+      letter-spacing: 0.02em;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .hero-photo-wrap {
+      display: inline-block;
+      padding: 4px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.1));
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-photo {
+      display: block;
+      max-width: min(280px, 78vw);
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+
+    /* 正文白卡片 — 类似推文阅读区 */
+    .article-card {
+      max-width: calc(var(--max-read) + 3rem);
+      margin: -2rem auto 0;
+      padding: 0 0.75rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .article-body {
+      background: var(--paper);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card), var(--shadow-soft);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      padding: 1.75rem 1.35rem 2.25rem;
+    }
+
+    @media (min-width: 480px) {
+      .article-body {
+        padding: 2rem 2rem 2.5rem;
+      }
+    }
+
+    .meta-line {
+      text-align: center;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin: 0 0 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--paper-edge);
+    }
+
+    section {
+      margin-bottom: 1.85rem;
+    }
+
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    section h2 {
+      margin: 0 0 1rem;
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.4;
+      padding: 0 0 0.65rem 0.75rem;
+      border-left: 4px solid var(--accent);
+      background: linear-gradient(90deg, var(--accent-soft), transparent 65%);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    section p {
+      margin: 0 0 1rem;
+      text-align: justify;
+      text-justify: inter-ideograph;
+      hyphens: auto;
+      font-size: 1rem;
+      color: var(--ink-soft);
+    }
+
+    section p:last-child {
+      margin-bottom: 0;
+    }
+
+    ol.directions {
+      margin: 0.5rem 0 1rem;
+      padding: 0.75rem 1rem 0.75rem 2.25rem;
+      background: #fafafa;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--paper-edge);
+    }
+
+    ol.directions li {
+      margin-bottom: 0.4rem;
+      padding-left: 0.25rem;
+    }
+
+    ol.directions li:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-block {
+      margin-top: 1.35rem;
+      padding: 1.1rem 1.15rem;
+      background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--paper-edge);
+    }
+
+    .contact-block:first-of-type {
+      margin-top: 0.5rem;
+    }
+
+    .contact-block h3 {
+      margin: 0 0 0.6rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--accent-deep);
+    }
+
+    .contact-block p {
+      margin: 0.3rem 0;
+      font-size: 0.9375rem;
+    }
+
+    footer.site-footer {
+      text-align: center;
+      padding: 2rem 1rem 0;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    footer.site-footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="article-hero">
+      <div class="inner">
+        <div class="badge-row" aria-hidden="true">
+          <span>博士后招聘</span>
+          <span>山东中医药大学</span>
+        </div>
+        <h1>山东中医药大学李霞课题组博士后招聘</h1>
+        <div class="hero-photo-wrap">
+          <img class="hero-photo" src="李霞照片.jpg" alt="李霞教授">
+        </div>
+      </div>
+    </header>
+
+    <article class="article-card">
+      <div class="article-body">
+        <p class="meta-line">中医药免疫调控 · 诚邀青年学者加入</p>
+
+        <section id="mentor">
+          <h2>一、导师简介</h2>
+          <p>李霞，中医学博士，免疫学博士后，二级教授，博士生导师，美国MD Anderson Cancer Center免疫系访问学者，国家青年岐黄学者，泰山学者特聘专家，山东省中医药高层次学术领军人才，山东省“十佳五一巾帼标兵”，现任山东中医药大学中医学院、中医药创新研究院党委副书记、院长，中医学部执行主任，中医药免疫调控山东省工程研究中心主任。兼任山东省免疫学会常务理事、山东免疫学会青工会主任委员、山东中西医结合学会中医药免疫专业委员会主任委员等职，为国家自然科学基金函审和会评专家、《中国免疫学杂志》青年编委及多个国内外权威期刊审稿专家。主要从事中医药免疫调控机制及物质基础的科研与教学工作，先后为首主持国家级及省部级科研项目20余项，授权国家发明专利21项，授权计算机软件著作权10项；发表期刊学术论文80余篇，其中SCI收录50篇、中文核心期刊论文30余篇；参编著作9部，获山东省“十佳五一巾帼标兵”。为首获得山东省科技进步二等奖、中华中医药学会科技二等奖、中国中西医结合学会科学技术二等奖、中国民族医药学会科学技术二等奖等科研奖励20余项，获得2025年度山东省教学成果一等奖，入选2025山东省优秀研究生导学团队。</p>
+        </section>
+
+        <section id="team">
+          <h2>二、团队简介</h2>
+          <p>李霞教授领衔的中医药免疫调控青年创新团队长期致力于中医药免疫调控关键机制的系统性研究，在中医药调节母胎免疫微环境、中医药抗血管炎症损伤、中医药调节肿瘤免疫微环境等方面具有丰富的理论基础和研究经验。相关研究工作得到国家自然科学基金项目、山东省自然科学基金重大项目、青年岐黄学者、泰山学者计划等项目支持，团队以通讯作者或共同通讯作者身份在NCB、JCI、Cancer Letter、CDD、ATVB、Int J Biol Sci.等国际权威期刊发表多篇研究成果，获得山东省科技进步二等奖、中华中医药科技成果二等奖、中国妇幼健康科技成果二等奖等多项奖励，有力推动了中医药免疫调控领域的技术进步。</p>
+          <p>团队主页：<a href="https://tcmimm.top/" target="_blank" rel="noopener noreferrer">https://tcmimm.top/</a></p>
+        </section>
+
+        <section id="research">
+          <h2>三、研究方向</h2>
+          <p>课题组致力于综合利用免疫学、分子生物学与人工智能等多学科交叉前沿技术，围绕中医药免疫调控关键机制与物质基础开展系统性研究，具体包括以下3个研究方向：</p>
+          <ol class="directions">
+            <li>中医药调节母胎免疫微环境。</li>
+            <li>中医药抗血管炎症损伤。</li>
+            <li>中医药调节肿瘤免疫微环境。</li>
+          </ol>
+          <p>诚挚招聘博士后从事以下研究工作，包括但不限于：中医学、中药学、中西医结合、基础医学、临床医学、生物学、遗传学、药学、生物医学工程科、食品科学与工程、计算机科学与技术、人工智能。</p>
+        </section>
+
+        <section id="apply">
+          <h2>四、报名方式</h2>
+          <p>应聘人员登录山东中医药大学中医药创新研究院官网（<a href="https://cxyjy.sdutcm.edu.cn/" target="_blank" rel="noopener noreferrer">https://cxyjy.sdutcm.edu.cn/</a>），须认真阅读官网通知公告中发布的《中医药创新研究院2026年引才计划（师资博士后）引进公告》。应聘人员请将相关材料电子版打包发送至<a href="mailto:cxyjy8510@163.com">cxyjy8510@163.com</a>，邮件主题请标明“岗位名称+姓名”。</p>
+        </section>
+
+        <section id="contact">
+          <h2>五、联系方式</h2>
+          <div class="contact-block">
+            <h3>1. 合作导师联系方式</h3>
+            <p>联系人：李老师</p>
+            <p>联系方式：<a href="mailto:60230033@sdutcm.edu.cn">60230033@sdutcm.edu.cn</a></p>
+          </div>
+          <div class="contact-block">
+            <h3>2. 学院博士后管理人员联系方式</h3>
+            <p>联系人：周老师</p>
+            <p>联系电话：<a href="tel:053189628510">0531-89628510</a></p>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <footer class="site-footer">
+      <p>山东中医药大学 · 李霞课题组</p>
+    </footer>
+  </div>
+</body>
+</html>
